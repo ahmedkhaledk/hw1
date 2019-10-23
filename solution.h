@@ -1,3 +1,13 @@
+// Name : Khaled Ahmed Khaled
+// Prof : Bill Donkervoet
+//assignment: homework1
+//date: 10/22/2019
+
+
+
+
+
+
 #pragma once
 typedef int ListItem;
 

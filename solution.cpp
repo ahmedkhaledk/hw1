@@ -1,7 +1,7 @@
 
 
 
-// Headers 
+// Headers files
 
 #include "solution.h"
 #include "iostream"
@@ -24,7 +24,8 @@ List::~List()
 { 
 
 }
-
+// this function of type unsigned int and it does not take 
+// any argument and it will return the the size of the list
 unsigned int List::GetSize()
 
 {
@@ -35,7 +36,8 @@ unsigned int List::GetSize()
 
 
 
-
+// this function Print has a type void and does not take 
+// any arguments. it wwill print out each item in the list from first to last
 
 
 
@@ -57,6 +59,9 @@ void List::Print()
 
 }
 
+// this function has a type of void and 
+//prints out each item in the list from last to first
+
 void List::ReversePrint()
 {
 
@@ -68,6 +73,10 @@ void List::ReversePrint()
 	
 
 }
+
+
+// this function ArrayList derives from List.    
+//The constructor should take an unsigned int specifying the capacity of the 
 
 ArrayList::ArrayList(unsigned int capacity)
 
@@ -82,6 +91,8 @@ ArrayList::ArrayList(unsigned int capacity)
 
 }
 
+// this function has a type of bool and it should fail  should fail meaning ruturn false
+//if the array is full.
 bool ArrayList::AppendItem(ListItem item)
 
 {
@@ -98,6 +109,8 @@ bool ArrayList::AppendItem(ListItem item)
 
 }
 
+// this function is type of bool and and it should fail  should fail meaning ruturn false
+//if the array is full.
 bool ArrayList::PrependItem(ListItem item)
 
 {
@@ -120,6 +133,9 @@ bool ArrayList::PrependItem(ListItem item)
 
 }
 
+// this function GetItemAt takes unsigned int as an argument and return 
+// the iteam
+
 ListItem ArrayList::GetItemAt(unsigned int i)
 
 {
@@ -127,6 +143,9 @@ ListItem ArrayList::GetItemAt(unsigned int i)
 	return ITEMS[i];
 
 }
+
+// this function has a type of void and takes one argument and 
+//deletes the list item at the passed-in index
 
 void ArrayList::DeleteItemAt(unsigned int i)
 
@@ -143,7 +162,8 @@ void ArrayList::DeleteItemAt(unsigned int i)
 	ITEMS_COUNT--;
 
 }
-
+// this function call the List class Print function and then print 
+//the contents of the list in the format "\t[0, 1, 2, 3]"
 void ArrayList::Print()
 
 {
@@ -164,6 +184,7 @@ void ArrayList::Print()
 
 }
 
+// this function should fail (return false) if the array is full.
 bool DoublyLinkedList::AppendItem(ListItem item)
 
 {
@@ -199,6 +220,9 @@ bool DoublyLinkedList::AppendItem(ListItem item)
 	return true;
 
 }
+
+//  PrependItem should fail (i.e. return false) if the array is full.
+
 
 bool DoublyLinkedList::PrependItem(ListItem item)
 
@@ -277,6 +301,8 @@ void DoublyLinkedList::DeleteItemAt(unsigned int i)
 	tmp->next_ = tmp->next_->next_;
 
 }
+//this function should first call the List class Print function
+//and then print the contents of the list in the format "\t[0, 1, 2, 3]"
 
 void DoublyLinkedList::Print()
 
